@@ -33,7 +33,7 @@ const getUserByEmail = function(email){
   });
 };
 const getUserById = function(id){
-  const sqlQuery = `SELECT * FROM users WHERE id='${  email  }';`;
+  const sqlQuery = `SELECT * FROM users WHERE id='${  id  }';`;
   connection.query(sqlQuery, (err, result, fields) => {
     if (err) throw err;
     console.log(result);
