@@ -17,10 +17,10 @@ passport.use(
       const firstName = profile.name.givenName;
       const lastName = profile.name.familyName;
 
-      const currentUser = await userRepository.getUserByEmail({ email });
+      const currentUser = userRepository.getUserByEmail({ email });
 
       if (!currentUser) {
-        const newUser = await userRepository.addGoogleUser({
+        const newUser = userRepository.addGoogleUser({
           id,
           email,
           firstName,
